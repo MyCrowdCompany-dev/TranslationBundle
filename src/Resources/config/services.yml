@@ -10,14 +10,14 @@ services:
       - { name: 'data_collector', template: "@HappyrTranslation/Profiler/translation", id: "translation", priority: 200 }
 
   happyr.translation.service.blackhole:
-    class: Happyr\TranslationBundle\Service\Blackhole
+    class: MyCrowdCompany\TranslationBundle\Service\Blackhole
 
   happyr.translation.service.filesystem:
-    class: Happyr\TranslationBundle\Service\Filesystem
+    class: MyCrowdCompany\TranslationBundle\Service\Filesystem
     arguments: ['@happyr.translation.filesystem']
 
   happyr.translation.filesystem:
-    class: Happyr\TranslationBundle\Translation\FilesystemUpdater
+    class: MyCrowdCompany\TranslationBundle\Translation\FilesystemUpdater
     arguments:
       - '@happyr.translation.loader'
       - '@happyr.translation.dumper'
@@ -29,7 +29,7 @@ services:
       - { name: kernel.event_listener, event: console.terminate, method: onTerminate, priority: -20 }
 
   happyr.translation.service.loco:
-    class: Happyr\TranslationBundle\Service\Loco
+    class: MyCrowdCompany\TranslationBundle\Service\Loco
     arguments:
       - '@happyr.translation.request_manager'
       - '@happyr.translation.filesystem'
@@ -37,6 +37,6 @@ services:
       - ~
 
   happyr.translation.request_manager:
-    class: Happyr\TranslationBundle\Http\RequestManager
+    class: MyCrowdCompany\TranslationBundle\Http\RequestManager
     arguments: [~, ~]
     public: false

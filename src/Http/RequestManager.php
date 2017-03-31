@@ -1,9 +1,9 @@
 <?php
 
-namespace Happyr\TranslationBundle\Http;
+namespace MyCrowdCompany\TranslationBundle\Http;
 
-use Happyr\TranslationBundle\Exception\HttpException;
-use Happyr\TranslationBundle\Translation\FilesystemUpdater;
+use MyCrowdCompany\TranslationBundle\Exception\HttpException;
+use MyCrowdCompany\TranslationBundle\Translation\FilesystemUpdater;
 use Http\Client\Exception\TransferException;
 use Http\Client\HttpClient;
 use Http\Client\Plugin\ErrorPlugin;

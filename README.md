@@ -58,7 +58,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Happyr\TranslationBundle\HappyrTranslationBundle(),
+        new MyCrowdCompany\TranslationBundle\HappyrTranslationBundle(),
     );
 }
 ```

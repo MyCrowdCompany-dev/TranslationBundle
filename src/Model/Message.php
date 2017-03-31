@@ -1,6 +1,6 @@
 <?php
 
-namespace Happyr\TranslationBundle\Model;
+namespace MyCrowdCompany\TranslationBundle\Model;
 
 /**
  * @author Tobias Nyholm

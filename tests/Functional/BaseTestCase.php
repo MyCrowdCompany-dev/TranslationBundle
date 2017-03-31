@@ -1,6 +1,6 @@
 <?php
 
-namespace Happyr\TranslationBundle\tests\Functional;
+namespace MyCrowdCompany\TranslationBundle\tests\Functional;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

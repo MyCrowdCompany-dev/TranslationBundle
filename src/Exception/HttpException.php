@@ -1,6 +1,6 @@
 <?php
 
-namespace Happyr\TranslationBundle\Exception;
+namespace MyCrowdCompany\TranslationBundle\Exception;
 
 /**
  * @author Tobias Nyholm

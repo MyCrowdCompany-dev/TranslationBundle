@@ -1,9 +1,9 @@
 <?php
 
-namespace Happyr\TranslationBundle\Service;
+namespace MyCrowdCompany\TranslationBundle\Service;
 
-use Happyr\TranslationBundle\Model\Message;
-use Happyr\TranslationBundle\Translation\FilesystemUpdater;
+use MyCrowdCompany\TranslationBundle\Model\Message;
+use MyCrowdCompany\TranslationBundle\Translation\FilesystemUpdater;
 
 class Filesystem implements TranslationServiceInterface
 {

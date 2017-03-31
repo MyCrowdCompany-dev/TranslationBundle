@@ -1,6 +1,6 @@
 <?php
 
-namespace Happyr\TranslationBundle\tests\Functional;
+namespace MyCrowdCompany\TranslationBundle\tests\Functional;
 
 class BundleInitializationTest extends BaseTestCase
 {

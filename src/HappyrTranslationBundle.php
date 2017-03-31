@@ -1,12 +1,12 @@
 <?php
 
-namespace Happyr\TranslationBundle;
+namespace MyCrowdCompany\TranslationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class HappyrTranslationBundle.
+ * Class MyCrowdCompanyTranslationBundle.
  */
-class HappyrTranslationBundle extends Bundle
+class MyCrowdCompanyTranslationBundle extends Bundle
 {
 }

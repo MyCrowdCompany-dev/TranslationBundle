@@ -1,6 +1,6 @@
 <?php
 
-namespace Happyr\TranslationBundle\tests\Functional;
+namespace MyCrowdCompany\TranslationBundle\tests\Functional;
 
 use Http\HttplugBundle\HttplugBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -32,7 +32,7 @@ class AppKernel extends Kernel
         return array(
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new \Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new \Happyr\TranslationBundle\HappyrTranslationBundle(),
+            new \MyCrowdCompany\TranslationBundle\HappyrTranslationBundle(),
             new \Http\HttplugBundle\HttplugBundle(),
         );
     }

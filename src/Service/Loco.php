@@ -1,12 +1,12 @@
 <?php
 
-namespace Happyr\TranslationBundle\Service;
+namespace MyCrowdCompany\TranslationBundle\Service;
 
-use Happyr\TranslationBundle\Exception\HappyrTranslationException;
-use Happyr\TranslationBundle\Exception\HttpException;
-use Happyr\TranslationBundle\Http\RequestManager;
-use Happyr\TranslationBundle\Model\Message;
-use Happyr\TranslationBundle\Translation\FilesystemUpdater;
+use MyCrowdCompany\TranslationBundle\Exception\HappyrTranslationException;
+use MyCrowdCompany\TranslationBundle\Exception\HttpException;
+use MyCrowdCompany\TranslationBundle\Http\RequestManager;
+use MyCrowdCompany\TranslationBundle\Model\Message;
+use MyCrowdCompany\TranslationBundle\Translation\FilesystemUpdater;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Translation\TranslatorInterface;
 

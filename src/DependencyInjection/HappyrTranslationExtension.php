@@ -1,6 +1,6 @@
 <?php
 
-namespace Happyr\TranslationBundle\DependencyInjection;
+namespace MyCrowdCompany\TranslationBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Happyr\TranslationBundle\Controller;
+namespace MyCrowdCompany\TranslationBundle\Controller;
 
-use Happyr\TranslationBundle\Model\Message;
+use MyCrowdCompany\TranslationBundle\Model\Message;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Happyr\TranslationBundle\Service;
+namespace MyCrowdCompany\TranslationBundle\Service;
 
-use Happyr\TranslationBundle\Model\Message;
+use MyCrowdCompany\TranslationBundle\Model\Message;
 
 class Blackhole implements TranslationServiceInterface
 {

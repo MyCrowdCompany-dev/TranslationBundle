@@ -1,9 +1,9 @@
 <?php
 
-namespace Happyr\TranslationBundle\Translation;
+namespace MyCrowdCompany\TranslationBundle\Translation;
 
-use Happyr\TranslationBundle\Model\Message;
-use Happyr\TranslationBundle\Service\TranslationServiceInterface;
+use MyCrowdCompany\TranslationBundle\Model\Message;
+use MyCrowdCompany\TranslationBundle\Service\TranslationServiceInterface;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\Translation\DataCollectorTranslator;
 

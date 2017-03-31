@@ -2,7 +2,7 @@
 
 services:
   happyr.translation.auto_adder:
-    class: Happyr\TranslationBundle\Translation\AutoAdder
+    class: MyCrowdCompany\TranslationBundle\Translation\AutoAdder
     arguments: [ '@?translator.data_collector', '@happyr.translation', '@happyr.translation.filesystem' ]
     tags:
       - { name: kernel.event_listener, event: kernel.terminate, method: onTerminate, priority: 10 }
