@@ -31,23 +31,23 @@ class HappyrTranslationExtension extends Extension
         $container->setParameter('translation.toolbar.allow_edit', $config['allow_edit']);
 
         $targetDir = rtrim($config['target_dir'], '/');
-        $container->findDefinition('happyr.translation.filesystem')
+        $container->findDefinition('mcchappyr.translation.filesystem')
             ->replaceArgument(2, $targetDir)
             ->replaceArgument(3, $config['file_extension'])
             ->replaceArgument(4, $config['sync_empty_translations']);
 
         $this->configureLoaderAndDumper($container, $config['file_extension']);
 
-        $container->getDefinition('happyr.translation.request_manager')
+        $container->getDefinition('mcchappyr.translation.request_manager')
             ->replaceArgument(0, new Reference($config['httplug_client']))
             ->replaceArgument(1, new Reference($config['httplug_message_factory']));
 
         /*
          * Set alias for the translation service
          */
-        $container->setAlias('happyr.translation', 'happyr.translation.service.'.$config['translation_service']);
+        $container->setAlias('mcchappyr.translation', 'mcchappyr.translation.service.'.$config['translation_service']);
 
-        $container->findDefinition('happyr.translation.service.loco')
+        $container->findDefinition('mcchappyr.translation.service.loco')
             ->replaceArgument(3, $config['projects']);
     }
 
@@ -85,10 +85,10 @@ class HappyrTranslationExtension extends Extension
                 break;
         }
 
-        $loader = $container->register('happyr.translation.loader', sprintf('Symfony\Component\Translation\Loader\%sFileLoader', ucfirst($fileExtension)));
+        $loader = $container->register('mcchappyr.translation.loader', sprintf('Symfony\Component\Translation\Loader\%sFileLoader', ucfirst($fileExtension)));
         $loader->addTag('translation.loader', ['alias' => $fileExtension]);
 
-        $dumper = $container->register('happyr.translation.dumper', sprintf('Symfony\Component\Translation\Dumper\%sFileDumper', ucfirst($fileExtension)));
+        $dumper = $container->register('mcchappyr.translation.dumper', sprintf('Symfony\Component\Translation\Dumper\%sFileDumper', ucfirst($fileExtension)));
         $dumper->addTag('translation.dumper', ['alias' => $fileExtension]);
     }
 }

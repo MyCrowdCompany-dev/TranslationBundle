@@ -3,24 +3,24 @@ parameters:
 services:
 
   # Custom data_collector to use our own template
-  happyr.translation.data_collector:
+  mcchappyr.translation.data_collector:
     class: Symfony\Component\Translation\DataCollector\TranslationDataCollector
     arguments: [ '@?translator.data_collector' ]
     tags:
       - { name: 'data_collector', template: "@HappyrTranslation/Profiler/translation", id: "translation", priority: 200 }
 
-  happyr.translation.service.blackhole:
+  mcchappyr.translation.service.blackhole:
     class: MyCrowdCompany\TranslationBundle\Service\Blackhole
 
-  happyr.translation.service.filesystem:
+  mcchappyr.translation.service.filesystem:
     class: MyCrowdCompany\TranslationBundle\Service\Filesystem
-    arguments: ['@happyr.translation.filesystem']
+    arguments: ['@mcchappyr.translation.filesystem']
 
-  happyr.translation.filesystem:
+  mcchappyr.translation.filesystem:
     class: MyCrowdCompany\TranslationBundle\Translation\FilesystemUpdater
     arguments:
-      - '@happyr.translation.loader'
-      - '@happyr.translation.dumper'
+      - '@mcchappyr.translation.loader'
+      - '@mcchappyr.translation.dumper'
       - ~
       - ~
       - ~
@@ -28,15 +28,15 @@ services:
       - { name: kernel.event_listener, event: kernel.terminate, method: onTerminate, priority: -20 }
       - { name: kernel.event_listener, event: console.terminate, method: onTerminate, priority: -20 }
 
-  happyr.translation.service.loco:
+  mcchappyr.translation.service.loco:
     class: MyCrowdCompany\TranslationBundle\Service\Loco
     arguments:
-      - '@happyr.translation.request_manager'
-      - '@happyr.translation.filesystem'
+      - '@mcchappyr.translation.request_manager'
+      - '@mcchappyr.translation.filesystem'
       - '@translator'
       - ~
 
-  happyr.translation.request_manager:
+  mcchappyr.translation.request_manager:
     class: MyCrowdCompany\TranslationBundle\Http\RequestManager
     arguments: [~, ~]
     public: false

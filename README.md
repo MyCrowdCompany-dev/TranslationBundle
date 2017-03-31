@@ -8,7 +8,7 @@
 
 This bundle helps you to integrate with a third party translation service. The bundle has been focused to integrate to 
 the [Loco](https://localise.biz) service. If you want to know how Happyr work with this bundle you should check out 
-[this blog post](http://developer.happyr.com/how-happyr-work-with-symfony-translations).
+[this blog post](http://developer.mcchappyr.com/how-happyr-work-with-symfony-translations).
 
 The key features of this bundle is: 
 

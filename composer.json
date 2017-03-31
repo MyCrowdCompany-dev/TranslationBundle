@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Integrate Symfony with translations SaaS like http://localise.biz",
     "keywords": [],
-    "homepage": "http://developer.happyr.com",
+    "homepage": "http://developer.mcchappyr.com",
     "license": "MIT",
     "authors": [
         {

@@ -18,7 +18,7 @@ class SynchronizeCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('happyr:translation:sync')
+            ->setName('mcchappyr:translation:sync')
             ->setDescription('Sync all your translations with SaaS. Leave place holders for missing translations.');
     }
     /**
@@ -26,7 +26,7 @@ class SynchronizeCommand extends ContainerAwareCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $this->getContainer()->get('happyr.translation')->synchronizeAllTranslations();
+        $this->getContainer()->get('mccmcchappyr.translation')->synchronizeAllTranslations();
         $output->writeln('Synchronization complete');
     }
 }

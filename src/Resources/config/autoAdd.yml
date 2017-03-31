@@ -1,8 +1,8 @@
 
 
 services:
-  happyr.translation.auto_adder:
+  mcchappyr.translation.auto_adder:
     class: MyCrowdCompany\TranslationBundle\Translation\AutoAdder
-    arguments: [ '@?translator.data_collector', '@happyr.translation', '@happyr.translation.filesystem' ]
+    arguments: [ '@?translator.data_collector', '@mcchappyr.translation', '@mcchappyr.translation.filesystem' ]
     tags:
       - { name: kernel.event_listener, event: kernel.terminate, method: onTerminate, priority: 10 }

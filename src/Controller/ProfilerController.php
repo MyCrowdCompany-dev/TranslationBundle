@@ -34,12 +34,12 @@ class ProfilerController extends Controller
         }
 
         $message = $this->getMessage($request, $token);
-        $trans = $this->get('happyr.translation');
+        $trans = $this->get('mcchappyr.translation');
 
         if ($request->isMethod('GET')) {
             $trans->fetchTranslation($message);
 
-            return $this->render('HappyrTranslationBundle:Profiler:edit.html.twig', [
+            return $this->render('MyCrowdCompanyTranslationBundle:Profiler:edit.html.twig', [
                 'message' => $message,
                 'key' => $request->query->get('message_id'),
             ]);
@@ -69,7 +69,7 @@ class ProfilerController extends Controller
 
         $message = $this->getMessage($request, $token);
 
-        $saved = $this->get('happyr.translation')->flagTranslation($message);
+        $saved = $this->get('mcchappyr.translation')->flagTranslation($message);
 
         return new Response($saved ? 'OK' : 'ERROR');
     }
@@ -90,7 +90,7 @@ class ProfilerController extends Controller
         }
 
         $message = $this->getMessage($request, $token);
-        $translation = $this->get('happyr.translation')->fetchTranslation($message, true);
+        $translation = $this->get('mcchappyr.translation')->fetchTranslation($message, true);
 
         if ($translation !== null) {
             return new Response($translation);
@@ -113,7 +113,7 @@ class ProfilerController extends Controller
             return $this->redirectToRoute('_profiler', ['token' => $token]);
         }
 
-        $this->get('happyr.translation')->synchronizeAllTranslations();
+        $this->get('mcchappyr.translation')->synchronizeAllTranslations();
 
         return new Response('Started synchronization of all translations');
     }
@@ -143,7 +143,7 @@ class ProfilerController extends Controller
         }
 
         $uploaded = array();
-        $trans = $this->get('happyr.translation');
+        $trans = $this->get('mcchappyr.translation');
         foreach ($messages as $message) {
             if ($trans->createAsset($message)) {
                 $uploaded[] = $message;
@@ -152,7 +152,7 @@ class ProfilerController extends Controller
 
         $saved = count($uploaded);
         if ($saved > 0) {
-            $this->get('happyr.translation.filesystem')->updateMessageCatalog($uploaded);
+            $this->get('mcchappyr.translation.filesystem')->updateMessageCatalog($uploaded);
         }
 
         return new Response(sprintf('%s new assets created!', $saved));

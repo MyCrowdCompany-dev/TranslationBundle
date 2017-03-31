@@ -12,9 +12,9 @@ class BundleInitializationTest extends BaseTestCase
     {
         $client = static::createClient();
         $container = $client->getContainer();
-        $container->get('happyr.translation.service.loco');
-        $container->get('happyr.translation.service.blackhole');
-        $container->get('happyr.translation.service.filesystem');
+        $container->get('mcchappyr.translation.service.loco');
+        $container->get('mcchappyr.translation.service.blackhole');
+        $container->get('mcchappyr.translation.service.filesystem');
     }
 
 

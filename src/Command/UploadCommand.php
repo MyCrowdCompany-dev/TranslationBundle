@@ -20,7 +20,7 @@ class UploadCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('happyr:translation:upload')
+            ->setName('mcchappyr:translation:upload')
             ->addOption('force', null, InputOption::VALUE_NONE, 'Set this parameter to execute this action')
             ->setDescription('Upload your translations into your translator service.');
     }
@@ -31,7 +31,7 @@ class UploadCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         if ($input->getOption('force')) {
-            $this->getContainer()->get('happyr.translation')->uploadAllTranslations();
+            $this->getContainer()->get('mccmcchappyr.translation')->uploadAllTranslations();
             $output->writeln('Upload complete');
         } else {
             $output->writeln('<error>ATTENTION:</error> This operation should not be executed in a production environment.');

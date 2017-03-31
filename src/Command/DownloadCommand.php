@@ -17,7 +17,7 @@ class DownloadCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('happyr:translation:download')
+            ->setName('mcchappyr:translation:download')
             ->setDescription('Replace your local files with the latest from your translation SaaS.');
     }
     /**
@@ -25,7 +25,7 @@ class DownloadCommand extends ContainerAwareCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $this->getContainer()->get('happyr.translation')->downloadAllTranslations();
+        $this->getContainer()->get('mccmcchappyr.translation')->downloadAllTranslations();
         $output->writeln('Download complete');
     }
 }
